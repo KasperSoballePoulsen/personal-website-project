@@ -1,0 +1,199 @@
+
+
+body {
+    background-color: rgba(250,250,250,255);
+
+}
+
+.mainContainer {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+#name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+    color: black;
+    
+}
+
+nav {
+    display: flex;
+    gap: 20px; 
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.menu {
+    position: relative; 
+    margin: 0;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+header p::after {
+    content: "";
+    position: absolute;
+    left: 50%;  
+    bottom: -3px; 
+    width: 0; 
+    height: 2px;
+    background-color: black;
+    transition: width 0.2s ease-out, left 0.2s ease-out;
+}
+
+header p:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
+
+
+#logo {
+    width: 100px; 
+    height: auto; 
+    margin-right: auto;
+    
+}
+
+
+
+#headerEndLine {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 5%;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "shortText profilePicture"
+    "deskSetupPicture TechnicalSkills";
+}
+
+
+
+
+
+
+#shortProfileText {
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 28pt;
+    grid-area: shortText;
+    margin-right: 5%;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+#profilePicWrapper {
+    width: 500px;
+    height: 480px;
+    overflow: hidden;
+    grid-area: profilePicture;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#profilePic {
+    margin-top: -80px;
+    grid-area: profilePicture;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+    width: 500px; 
+}
+
+#deskSetupWrapper {
+    width: 600px;
+    height: auto; 
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    grid-area: deskSetupPicture;
+    margin-top: -150px;
+}
+
+#deskSetupPic {
+    width: 600px;
+    margin-top: -20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.7s;
+    display: block; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+        
+    }
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+footer {
+    margin-top: 80px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 14pt;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 2s;
+    border-top: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
